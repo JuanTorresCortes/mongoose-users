@@ -3,6 +3,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config(); // helps us read dot env file 
+// process.env ATLAS_uri
+const { mongooseConnect } = require("./db");
+mongooseConnect()
+console.log( `line 9 app.js`, process.env.ATLAS_URI);
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
