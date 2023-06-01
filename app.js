@@ -11,6 +11,7 @@ console.log( `line 9 app.js`, process.env.ATLAS_URI);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const todosRouter = require('./routes/todos');
 
 var app = express();
 
@@ -22,5 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/todos', todosRouter);
 
 module.exports = app;
