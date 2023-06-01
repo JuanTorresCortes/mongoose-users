@@ -10,7 +10,10 @@ title: { type: String, required: true },
  
 description: { type: String , required: true},
  
-priority: {type: String,  enum: ['low', 'medium', 'high'],  default: 'medium' },
+priority: {type: String,  
+    enum: ['low', 'medium', 'high'],  
+    default: 'medium' 
+},
  
 completed: {type: Boolean, default: false},
  
@@ -19,5 +22,5 @@ createAt: { type: Date, default: Date.now}
  
 
 // mongoose.model("collection Name", schema)
-const Todo = mongoose.model("todos", todoSchema)
+const Todo = mongoose.model("Todos", todoSchema)
 module.exports = Todo;
