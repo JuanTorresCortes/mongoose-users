@@ -61,6 +61,7 @@ const deleteTodo = async (req, res) => {
 }
 
 const deleteAll = async (req, res) => {
+    // http://localhost:3000/todos/deleteAllTodo
     try {
       // Delete all todos
       const result = await Todo.deleteMany();
